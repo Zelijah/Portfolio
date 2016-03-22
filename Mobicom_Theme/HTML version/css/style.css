@@ -244,10 +244,10 @@ img, iframe { vertical-align: middle; }
 .site-header .social-link {
     float: left;
     margin-right: 10px;
-    border: 3px solid #ffa800;
+    border: 3px solid rgb(96,144,240);
     width: 26px;
     height: 26px;
-    color: #ffa800;
+    color: rgb(96,144,240);
     font-size: 12px;
     border-radius: 16px;
     text-align: center;
@@ -405,8 +405,8 @@ img, iframe { vertical-align: middle; }
 
 /* About Us */
 #who-text {
-    color: #7f8c8d;
-    font-size: 106%;
+    color: #000000;
+    font-size: 111%;
     line-height: 1.875;
     position: absolute;
     left: 13.76%;
@@ -414,13 +414,19 @@ img, iframe { vertical-align: middle; }
     width: 37.1%;
 }
 #who-text h1 {
-    font-size: 620%;
-    font-family: 'proxima-nova';
+    font-size: 460%;
+    font-family: 'Gruppo';
     margin: 17% 0px 10%;
     white-space: nowrap;
     line-height: 0.9;
-    text-underline-position: below
+    text-underline-position: below;
+    animation-name: lightSpeedIn;
+    animation-duration: 3s; 
+        
 }
+
+
+
 #who-image {
     position: absolute;
     left: 52.5%;
@@ -763,7 +769,7 @@ img, iframe { vertical-align: middle; }
 
 .site-header.yellow .site-menu a  { color: #000; }
 .site-header.yellow .site-menu a:hover,.site-header.yellow .site-menu a.active { color: #fff; }
-.site-header.grey .site-menu a:hover,.site-header.grey .site-menu a.active { color: #ffa800; }
+.site-header.grey .site-menu a:hover,.site-header.grey .site-menu a.active { color: rgb(96,144,240); }
 /* End G */
 
 .clearfix:before, .clearfix:after { content: ""; display: table; }
@@ -791,7 +797,7 @@ img, iframe { vertical-align: middle; }
 .container.show-5 { left: -400%; }
 
 .container .f-page {
-    background: #ffa800;
+    background: rgb(96,144,240);
     position: absolute;
     left: 0;
     top: 0px;
@@ -814,7 +820,7 @@ img, iframe { vertical-align: middle; }
 .container .f-page:nth-child(3) { left: 200%; }
 .container .f-page:nth-child(4) { left: 300%; }
 .container .f-page:nth-child(5) { left: 400%; }
-.container .f-page.yellow-bkg { background: #ffa800; }
+.container .f-page.yellow-bkg { background: rgb(96,144,240); }
 .container .f-page.gray-bkg { background: #f8f8f8; }
 .container .f-page.gray-bkg { background: #f8f8f8; }
 
@@ -829,7 +835,7 @@ img, iframe { vertical-align: middle; }
 
 /*loader content start*/
 #content-loader-holder {
-    background: #ffa800;
+    background: rgb(96,144,240);
     position: absolute;
     left: 0px;
     top: 0px;
@@ -957,10 +963,10 @@ border-top-color: #000000;
 .faw {
     font-size: 18px;
     letter-spacing: 6px;
-    color: #ffa800;
+    color: rgb(96,144,240);
 }
 .faw i{margin-right:10px;}
-.faw i:hover{color:#ffa800}
+.faw i:hover{color:rgb(96,144,240)}
 #case p {
     font-family: 'proxima-nova';
     color: #7f8c8d;
@@ -1165,4 +1171,52 @@ ul.rig.columns-4 li {
 		width: 100% !important; /* over-ride all li styles */
 		margin: 0 0 20px;
 	}
+}
+
+/*Animation for H1 'hi, salut' ****************************************************/
+@keyframes lightSpeedIn {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+    transform: translate3d(100%, 0, 0) skewX(-30deg);
+    opacity: 0;
+  }
+
+  60% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+h3 {
+    margin-left: 25px;
+    font-family: serif;
+    text-decoration: underline;
+    
+    
+}
+
+canvas {
+    margin-left: 535px;
+    
+    
 }
